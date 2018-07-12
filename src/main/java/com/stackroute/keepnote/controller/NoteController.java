@@ -38,6 +38,11 @@ public class NoteController {
 	@Autowired
 	private NoteDAO dao;
 
+	public NoteController(NoteDAO dao) {
+		super();
+		this.dao = dao;
+	}
+
 	/*
 	 * Define a handler method to read the existing notes by calling the
 	 * getAllNotes() method of the NoteRepository class and add it to the ModelMap
